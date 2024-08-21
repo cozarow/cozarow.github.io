@@ -2,14 +2,17 @@ body {
   background-color: black;
 }
 
-ul {
+header{
   background-color: dodgerblue;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  height: 45px;
 }
-li {
-  display: inline;
+header nav ul{
+display: flex;
+margin-left: 80%;
+}
+
+header nav ul li{
+padding-left: 10%;
 }
 
 h1 {
