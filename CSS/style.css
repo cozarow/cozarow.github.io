@@ -5,6 +5,9 @@ body {
 h1 {
   color: white;
   text-align: center;
+  font-family: georgia;
+  font-size: 35px;
+
 }
 
 p {
