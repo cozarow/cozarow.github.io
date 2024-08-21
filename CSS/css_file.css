@@ -1,1 +1,14 @@
+body {
+  background-color: black;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: georgia;
+  font-size: 16px;
+}
 
