@@ -7,12 +7,14 @@ header{
   height: 45px;
 }
 header nav ul{
-display: flex;
-margin-left: 80%;
+  list-style-type: none;
+  display: flex;
+  margin-left: 80%;
 }
 
 header nav ul li{
-padding-left: 10%;
+  display: inline;
+  padding-left: 10%;
 }
 
 h1 {
