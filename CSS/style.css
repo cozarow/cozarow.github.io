@@ -12,7 +12,7 @@ header nav {
   justify-content: flex-start; /* Align items to the start of the flex container */
   margin-left: 65%; /* Position the nav container at 65% from the left of the page */
   position: absolute; /* Allows for precise positioning */
-  width: 35%; /* The width should be 100% minus the margin-left (65%) */
+  width: 30%; /* The width should be 100% minus the margin-left (65%) */
 }
 
 header nav ul {
