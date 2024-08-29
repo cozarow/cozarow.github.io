@@ -21,7 +21,7 @@ header nav ul {
   justify-content: space-between; /* Space out items equally */
   padding: 0; /* Remove default padding */
   margin: 0; /* Remove default margin */
-  width: 95%; /* Full width of the nav container */
+  width: 98.5%; /* Full width of the nav container */
 }
 
 header nav ul li {
