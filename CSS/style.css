@@ -2,19 +2,30 @@ body {
   background-color: black;
 }
 
-header{
+header {
   background-color: dodgerblue;
   height: 22px;
 }
-header nav ul{
-  list-style-type: none;
+
+header nav {
   display: flex;
-  margin-left: 60%;
+  justify-content: flex-start; /* Align items to the start of the flex container */
+  margin-left: 65%; /* Position the nav container at 65% from the left of the page */
+  position: absolute; /* Allows for precise positioning */
+  width: 35%; /* The width should be 100% minus the margin-left (65%) */
 }
 
-header nav ul li{
-  display: inline;
-  padding-left: 15%;
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between; /* Space out items equally */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  width: 100%; /* Full width of the nav container */
+}
+
+header nav ul li {
+  display: inline; /* Ensure list items stay inline */
 }
 
 h1 {
