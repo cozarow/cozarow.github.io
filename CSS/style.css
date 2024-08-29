@@ -26,6 +26,7 @@ header nav ul {
 
 header nav ul li {
   display: inline; /* Ensure list items stay inline */
+  color: dodgerblue;
 }
 
 header nav ul li a:link {
@@ -42,7 +43,7 @@ header nav ul li a:visited {
 
 header nav ul li a:hover {
   text-decoration: none;
-  color: peach;
+  color: orange;
   font-size: 20px;
 }
 
