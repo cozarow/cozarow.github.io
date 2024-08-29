@@ -3,7 +3,7 @@ body {
 }
 
 header {
-  background-color: dodgerblue;
+  background-color: black;
   height: 22px;
 }
 
@@ -30,14 +30,17 @@ header nav ul li {
 
 header nav ul li a:link {
   text-decoration: none;
+  background-color: dodgerblue;
 }
 
 header nav ul li a:visited {
   text-decoration: none;
+  background-color: dodgerblue;
 }
 
 header nav ul li a:hover {
   text-decoration: none;
+  background-color: peach;
 }
 
 header nav ul li a:active {
