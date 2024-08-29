@@ -9,12 +9,12 @@ header{
 header nav ul{
   list-style-type: none;
   display: flex;
-  margin-left: 70%;
+  margin-left: 60%;
 }
 
 header nav ul li{
   display: inline;
-  padding-left: 10%;
+  padding-left: 15%;
 }
 
 h1 {
