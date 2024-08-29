@@ -68,7 +68,7 @@ p {
   font-size: 20px;
 }
 
-p a {
+a {
   background: linear-gradient(currentColor 0 0) 
     bottom left/
     var(--underline-width, 0%) 0.1em
@@ -79,17 +79,17 @@ p a {
   transition: background-size 0.5s;
 }
 
-p a:link {
+a:link {
   text-decoration: none;
   color: dodgerblue;
 }
 
-p a:visited {
+a:visited {
   text-decoration: none;
   color: dodgerblue;
 }
 
-p a:hover {
+a:hover {
   color: dodgerblue;
   --underline-width: 100%;
 }
