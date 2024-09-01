@@ -61,6 +61,17 @@ h1 {
 
 }
 
+.container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; /* Adjust spacing between image and text */
+}
+
+.container img {
+    max-width: 100%;
+    height: auto;
+}
+
 p {
   color: white;
   text-align: center;
