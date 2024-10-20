@@ -2,6 +2,13 @@ body {
   background-color: black;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
 header {
   background-color: black;
   height: 22px;
