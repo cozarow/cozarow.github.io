@@ -9,6 +9,14 @@ body {
   height: 100vh; /* Full viewport height */
 }
 
+#text {
+  color: white;
+  text-align: center;
+  font-family: georgia;
+  font-size: 30px;
+}
+
+
 header {
   background-color: black;
   height: 22px;
