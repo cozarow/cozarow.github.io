@@ -9,7 +9,7 @@ body {
   height: 100vh; /* Full viewport height */
 }
 
-#text {
+  #text {
   color: white;
   text-align: center;
   font-family: georgia;
