@@ -1,6 +1,6 @@
-const sentence = "hi, i'm cerulean ozarow";
+const sentence = "hi, i'm cerulean ozarow!";
 let index = 0;
-const speed = 150; // Speed of typing in milliseconds
+const speed = 100; // Speed of typing in milliseconds
 
 function typeWriter() {
   const textElement = document.getElementById("text");
