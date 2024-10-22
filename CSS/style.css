@@ -94,8 +94,16 @@ p {
   font-size: 20px;
 }
 
+.pronunciation {
+  display: none;
+}
+
 .my_name:hover {
-  content: 's'
+  display: none;
+}
+
+.pronunciation:hover {
+  display: inline;
 }
 
 a {
