@@ -102,7 +102,7 @@ p {
   display: none;
 }
 
-.pronunciation:hover {
+.my_name:hover + .pronunciation {
   display: inline;
 }
 
