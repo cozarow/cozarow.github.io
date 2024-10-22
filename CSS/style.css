@@ -94,11 +94,8 @@ p {
   font-size: 20px;
 }
 
-.span {
-}
-
-#my_name {
-  color: red;
+.my_name:hover {
+  content: 's'
 }
 
 a {
