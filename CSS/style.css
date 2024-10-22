@@ -94,6 +94,13 @@ p {
   font-size: 20px;
 }
 
+.span {
+}
+
+#my_name {
+  color: dodgerblue;
+}
+
 a {
   background: linear-gradient(currentColor 0 0) 
     bottom left/
@@ -119,3 +126,4 @@ a:hover {
   color: dodgerblue;
   --underline-width: 100%;
 }
+
