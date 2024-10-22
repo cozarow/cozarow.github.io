@@ -9,11 +9,18 @@ body {
   height: 100vh; /* Full viewport height */
 }
 
-  #text {
+  #text1 {
   color: white;
   text-align: center;
   font-family: georgia;
   font-size: 80px;
+}
+
+  #text2 {
+  color: white;
+  text-align: center;
+  font-family: georgia;
+  font-size: 40px;
 }
 
 
