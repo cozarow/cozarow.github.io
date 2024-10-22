@@ -94,7 +94,7 @@ p {
   font-size: 20px;
 }
 
-.pronunciation:hover::before {
+.pronunciation {
   display: none;
 }
 
