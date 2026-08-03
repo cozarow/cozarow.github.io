@@ -1,17 +1,10 @@
-const sentence = "welcome to my website :)";
-let index = 0;
-const speed = 75; // Speed of typing in milliseconds
-
-function typeWriter() {
+function fadeText2() {
   const textElement = document.getElementById("text2");
-  
-  // Add the next character to the text element
-  if (index < sentence.length) {
-    textElement.innerHTML += sentence.charAt(index);
-    index++;
-    setTimeout(typeWriter, speed);
-  }
+  textElement.style.transition = "color 2s ease";
+  requestAnimationFrame(() => {
+    textElement.style.color = "white";
+  });
 }
 
-// Call the function to start typing when the page loads
-window.onload = typeWriter;
+// wait for first.js to signal it's done, instead of using window.onload
+document.addEventListener("firstDone", fadeText2);
