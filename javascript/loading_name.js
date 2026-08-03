@@ -1,17 +1,17 @@
-const sentence = "hi, i'm cerulean ozarow!";
-let index = 0;
-const speed = 100; // Speed of typing in milliseconds
+const sentence1 = "hi, i'm cerulean ozarow!";
+let index1 = 0;
+const speed1 = 100;
 
-function typeWriter() {
+function typeWriter1() {
   const textElement = document.getElementById("text1");
-  
-  // Add the next character to the text element
-  if (index < sentence.length) {
-    textElement.innerHTML += sentence.charAt(index);
-    index++;
-    setTimeout(typeWriter, speed);
+  if (index1 < sentence1.length) {
+    textElement.innerHTML += sentence1.charAt(index1);
+    index1++;
+    setTimeout(typeWriter1, speed1);
+  } else {
+    // finished typing — let the next script know
+    document.dispatchEvent(new Event("firstDone"));
   }
 }
 
-// Call the function to start typing when the page loads
-window.onload = typeWriter;
+window.onload = typeWriter1;
