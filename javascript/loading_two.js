@@ -1,6 +1,6 @@
 function fadeText2() {
   const textElement = document.getElementById("text2");
-  textElement.style.transition = "color 2s ease";
+  textElement.style.transition = "color 4s ease";
   requestAnimationFrame(() => {
     textElement.style.color = "white";
   });
