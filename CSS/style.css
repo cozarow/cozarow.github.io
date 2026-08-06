@@ -94,6 +94,10 @@ h1 {
     height: auto;
 }
 
+.center {
+    align-items: center;
+}
+
 p {
   color: white;
   text-align: center;
