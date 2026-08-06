@@ -1,4 +1,4 @@
-const sentence1 = "hi, i'm cerulean ozarow!!!";
+const sentence1 = "hi, i'm cerulean ozarow!";
 let index1 = 0;
 const speed1 = 100;
 
