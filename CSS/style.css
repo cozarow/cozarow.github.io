@@ -95,8 +95,12 @@ h1 {
 }
 
 .center {
-    display: grid;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* horizontal centering */
+  justify-content: center; /* vertical centering */
+  height: 100vh;           /* container needs real height to center within */
+  text-align: center;
 }
 
 p {
