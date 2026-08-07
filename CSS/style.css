@@ -110,15 +110,15 @@ p {
   font-size: 20px;
 }
 
-.pronunciation {
+.hoverable_name .pronunciation{
   display: none;
 }
 
-.my_name:hover {
+.hoverable_name:hover .my_name {
   display: none;
 }
 
-.my_name:hover + .pronunciation {
+.hoverable_name:hover .pronunciation {
   display: inline;
 }
 
