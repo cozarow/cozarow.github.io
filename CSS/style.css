@@ -1,5 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
+  min-height: 100vh;
   background-color: black;
+  overflow: hidden;
 }
 
 .container {
@@ -12,14 +18,14 @@ body {
   #text1 {
   color: white;
   text-align: center;
-  font-family: georgia;
+  font-family: Quicksand, Georgia, serif;
   font-size: 80px;
 }
 
   #text2 {
-  color: white;
+  color: white; 
   text-align: center;
-  font-family: georgia;
+  font-family: Quicksand, Georgia, serif;
   font-size: 40px;
 }
 
@@ -78,7 +84,7 @@ header nav ul li a:active {
 h1 {
   color: white;
   text-align: center;
-  font-family: georgia;
+  font-family: Quicksand, Georgia, serif;
   font-size: 35px;
 
 }
@@ -106,7 +112,7 @@ h1 {
 p {
   color: white;
   text-align: center;
-  font-family: georgia;
+  font-family: Quicksand, Georgia, serif;
   font-size: 20px;
 }
 
@@ -146,5 +152,63 @@ a:visited {
 a:hover {
   color: dodgerblue;
   --underline-width: 100%;
+}
+
+.writing_category hr {
+  border: none;
+  border-top: 3px solid white;
+  width: min(100%, max(600px, 70%));
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* Styling for links is mostly unnecessary */
+.writing_category a {
+  color: white;
+  text-decoration: none;
+}
+
+.writing_category a:link {
+  color: white
+}
+
+.writing_category a:visited {
+  color: white
+}
+
+.writing_category a:hover {
+  color: lightskyblue;
+  --underline-width: 0%;
+}
+
+.writing_category a:hover .category_title{
+  color: lightskyblue;
+}
+
+.writing_category a:hover .writing_description{
+  color: lightskyblue;
+}
+
+.writing_category:hover .category_title {
+  color: mediumpurple
+}
+
+.writing_category:hover .writing_description {
+  color: mediumpurple
+}
+
+.writing_category .category_title {
+  text-align: left;
+  margin: 10px 40px; /* top/bottom, left/right */
+  font-family: Quicksand, Georgia, serif;
+  font-size: 30px;
+}
+
+.writing_category .writing_description {
+  text-align: left;
+  margin: 10px 40px; /* top/bottom, left/right */
+  font-family: Quicksand, Georgia, serif;
+  font-size: 18px;
+  width: calc(min(100%, max(600px, 70%)) - 40px);
 }
 
