@@ -1,0 +1,189 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: georgia, serif;
+    padding: 0;
+  }
+
+.content {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 6rem;
+  }
+
+/* Header is the same as in style.css */
+header {
+  background-color: black;
+  height: 22px;
+  font-family: Georgia, serif;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-start; /* Align items to the start of the flex container */
+  margin-left: 65%; /* Position the nav container at 65% from the left of the page */
+  position: absolute; /* Allows for precise positioning */
+  width: 33.5%; /* The width should be 100% minus the margin-left (65%) */
+}
+
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between; /* Space out items equally */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  width: 98.5%; /* Full width of the nav container */
+}
+
+header nav ul li {
+  display: inline; /* Ensure list items stay inline */
+  color: dodgerblue;
+}
+
+header nav ul li a:link {
+  text-decoration: none;
+  color: dodgerblue;
+  font-size: 20px;
+}
+
+header nav ul li a:visited {
+  text-decoration: none;
+  color: dodgerblue;
+  font-size: 20px;
+}
+
+header nav ul li a:hover {
+  text-decoration: none;
+  color: orange;
+  font-size: 20px;
+}
+
+header nav ul li a:active {
+  text-decoration: none;
+  color: dodgerblue;
+  font-size: 20px;
+}
+
+a {
+  background: linear-gradient(currentColor 0 0) 
+    bottom left/
+    var(--underline-width, 0%) 0.1em
+    no-repeat;
+  display: inline-block;
+  padding: 0 0 0;
+  text-decoration: none;
+  transition: background-size 0.5s;
+}
+
+a:link {
+  text-decoration: none;
+  color: dodgerblue;
+}
+
+a:visited {
+  text-decoration: none;
+  color: dodgerblue;
+}
+
+a:hover {
+  color: dodgerblue;
+  --underline-width: 100%;
+}
+
+h1 {
+font-size: 32px;
+font-weight: normal;
+margin-bottom: 0.25rem;
+}
+
+.subtitle {
+color: #aaa;
+font-style: italic;
+margin-top: 0;
+margin-bottom: 2.5rem;
+}
+
+p {
+line-height: 1.6;
+font-size: 18px;
+}
+
+ol {
+line-height: 1.6;
+font-size: 18px;
+}
+
+figure {
+margin: 2rem 0;
+}
+
+figure img {
+max-width: 100%;
+height: auto;
+display: block;
+}
+
+.row {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.row .placeholder {
+  flex: 1 1 0;
+  min-width: 140px;
+}
+
+.row img {
+    flex: 1 1 0;
+    min-width: 0;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+
+.placeholder {
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+min-height: 220px;
+border: 1px dashed #555;
+background-color: #111;
+color: #777;
+font-family: sans-serif;
+font-size: 14px;
+padding: 1rem;
+}
+
+figcaption {
+font-style: italic;
+color: #ccc;
+font-size: 15px;
+margin-top: 0.5rem;
+}
+
+hr {
+border: none;
+border-top: 1px solid #444;
+width: min(100%, 500px);
+margin: 3rem auto;
+}
+
+.puzzle {
+background-color: #111;
+border: 1px solid #333;
+border-radius: 8px;
+padding: 1.5rem 1.75rem;
+margin-top: 2.5rem;
+}
+
+.puzzle p {
+margin-top: 0;
+}
+
+.puzzle .prompt {
+  font-style: italic;
+  color: #ccc;
+}

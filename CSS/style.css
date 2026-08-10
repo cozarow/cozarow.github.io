@@ -33,6 +33,7 @@ body {
 header {
   background-color: black;
   height: 22px;
+  font-family: Quicksand, Georgia, serif;
 }
 
 header nav {
