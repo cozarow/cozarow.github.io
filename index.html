@@ -9,13 +9,15 @@
 </head>
 <body>
 
+<div id="wrapper" class="wrapper">
+<section id="page1" class="page">
 <header id="site-header" style="opacity: 0";>
     <nav>
         <ul>
-          <li><a href="about.html">about</a></li>
-          <li><a href="writing.html">writing</a></li>
-          <li><a href="music.html">music</a></li>
-          <li><a href="genealogy.html">genealogy</a></li>
+          <li><a href="about">about</a></li>
+          <li><a href="writing">writing</a></li>
+          <li><a href="music">music</a></li>
+          <li><a href="genealogy">genealogy</a></li>
           <li>HOME</li>
         </ul>
         </nav>
@@ -26,8 +28,37 @@
     <h1 id="text2" style="color: black;">welcome to my website :)</h1>
 </div>
 
+  <div id="scroll-arrow" class="scroll-arrow">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 12 15 18 9"/>
+    </svg>
+  </div>
+
 <script src="javascript/loading_name.js"></script>
 <script src="javascript/loading_two.js"></script>
 <script src="javascript/header.js"></script>
+<script src="javascript/second_page.js"></script>
+
+</section>
+
+<section id="page2" class="page page-blue">
+  <p style="text-align: left; font-size: 30px; margin-left: 10px">Hello! Here you can:</p>
+
+  <a href="about.html">1. Learn a bit more about me, including information about my current exploits and a mini-résumé. </a><br><br>
+
+  <a href="writing.html">2. Read some of my writing. </a><br><br>
+
+  <a href="music.html">3. Listen to some music I've worked on. </a><br><br>
+
+  <a href="genealogy.html">4. Learn a bit about my family history (upcoming). </a><br>
+
+  <p style="text-align: left; font-size: 20px; margin-left: 10px">5. Explore some of my other projects (upcoming). </p>
+  <p style="text-align: left; font-size: 20px; margin-left: 10px">6. Contact me!</p>
+
+  <p style="text-align: left; font-size: 20px; margin-left: 10px">Click any of the above options to learn more! As you might be able to tell, this website is a work in progress; I will continue adding to it as time goes on. It is built fully manually (no templates, no React or next.js), with LLM help on certain parts (never on my writing)!</p>
+
+</section>
+</div>
+
 </body>
 </html>

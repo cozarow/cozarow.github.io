@@ -5,7 +5,7 @@ function fadeText2() {
 // Allow header to appear while still transitioning
   setTimeout(() => {
     document.dispatchEvent(new Event("secondDone"));
-  }, 2000);
+  }, 1500);
 
   requestAnimationFrame(() => {
     textElement.style.color = "white";

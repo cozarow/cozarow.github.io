@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   min-height: 100vh;
   background-color: black;
   overflow: hidden;
@@ -213,3 +213,47 @@ a:hover {
   width: calc(min(100%, max(600px, 70%)) - 40px);
 }
 
+/* New page content (Claude) */
+.wrapper {
+  height: 100vh;
+  transition: transform 5s ease;
+}
+
+.page {
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.page-blue {
+  background-color: dodgerblue;
+  overflow: auto;
+}
+
+.page-blue a {
+  color: white;
+  text-decoration: none;
+  text-align: left;
+  font-size: 20px;
+  margin-left: 10px;
+  font-family: Quicksand, Georgia, serif;
+}
+
+.scroll-arrow {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 1s ease;
+  animation: bounce 2s infinite;
+}
+
+.scroll-arrow.visible {
+  opacity: 1;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
