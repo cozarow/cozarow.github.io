@@ -3,9 +3,10 @@
 }
 
 html, body {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background-color: black;
-  overflow: hidden;
+  /* margin: 0;
+  /* overflow: hidden; */
 }
 
 .container {
