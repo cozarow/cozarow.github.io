@@ -202,6 +202,7 @@ a:hover {
 
 .writing_category .category_title {
   text-align: left;
+  display: inline-block;
   margin: 10px 40px; /* top/bottom, left/right */
   font-family: Quicksand, Georgia, serif;
   font-size: 30px;
@@ -213,6 +214,16 @@ a:hover {
   font-family: Quicksand, Georgia, serif;
   font-size: 18px;
   width: calc(min(100%, max(600px, 70%)) - 40px);
+}
+
+.writing_category a .date {
+  pointer-events: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-style: italic;
+  font-family: Georgia, serif;
+  color: #888;
+  margin-top: 0.5rem;
 }
 
 /* New page content (Claude) */
