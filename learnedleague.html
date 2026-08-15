@@ -73,7 +73,7 @@
 
 <h1>LearnedLeague Player Similarity</h1>
 <p class="hint">
-  Enter one player's LL abbreviation (e.g. <code>IntegrityT</code>) to see the 25 players most similar to them, or enter two to see how similar they are.
+  Enter one person's LL player name (e.g. <code>IntegrityT</code>) to see the 25 players most similar to them, or enter two players to see how similar they are.
 </p>
 
 <label for="season">Season</label>
@@ -125,7 +125,7 @@ function buildIndexes(answers) {
 function buildCounts(answers) {
   const nonForfeit = new Map();
   const correct = new Map();
-  for (const [label, s] of Object.entries(answers)) {
+  for (const [label, [, s]] of Object.entries(answers)) {
     let nf = 0, c = 0;
     for (let i = 0; i < s.length; i++) {
       const ch = s[i];
@@ -138,9 +138,14 @@ function buildCounts(answers) {
   return { nonForfeit, correct };
 }
 
+// "C_Nebula_Div_1" -> "C Nebula Div 1"
+function formatRundle(rundle) {
+  return rundle.replace(/_/g, " ");
+}
+
 async function loadSeason(season) {
   if (dataCache[season]) return dataCache[season];
-  const res = await fetch(`ll_data/web_answers_${season}.json`);
+  const res = await fetch(`ll_data/with_rundle_${season}.json`);
   if (!res.ok) {
     throw new Error(`Couldn't load data for LL${season}.`);
   }
@@ -157,16 +162,16 @@ async function loadSeason(season) {
 // minNonForfeit/minCorrect filter which *other* players are eligible,
 // exactly like the Python version's same-named parameters.
 function topMatches(label, entry, minNonForfeit, minCorrect, limit) {
-  const s1 = entry.answers[label];
+  const [, s1] = entry.answers[label];
   const results = [];
-  for (const [otherLabel, s2] of Object.entries(entry.answers)) {
+  for (const [otherLabel, [rundle, s2]] of Object.entries(entry.answers)) {
     if (otherLabel === label) continue;
     if (entry.nonForfeit.get(otherLabel) < minNonForfeit) continue;
     if (entry.correct.get(otherLabel) < minCorrect) continue;
     const frac = pairwiseAgreement(s1, s2);
-    if (frac !== null) results.push([otherLabel, frac]);
+    if (frac !== null) results.push([otherLabel, rundle, frac]);
   }
-  results.sort((a, b) => b[1] - a[1]);
+  results.sort((a, b) => b[2] - a[2]);
   return results.slice(0, limit);
 }
 
@@ -268,9 +273,9 @@ async function runQuery() {
       return;
     }
     const table = document.createElement("table");
-    matches.forEach(([otherLabel, frac], i) => {
+    matches.forEach(([otherLabel, rundle, frac], i) => {
       const tr = document.createElement("tr");
-      tr.innerHTML = `<td class="rank">${i + 1}</td><td>${otherLabel}</td><td class="pct">${fmtPct(frac)}</td>`;
+      tr.innerHTML = `<td class="rank">${i + 1}</td><td>${otherLabel}</td><td>${formatRundle(rundle)}</td><td class="pct">${fmtPct(frac)}</td>`;
       table.appendChild(tr);
     });
     resultsEl.innerHTML = `<div>Most similar to <strong>${r1.label}</strong>:</div>`;
@@ -289,7 +294,7 @@ async function runQuery() {
     return;
   }
 
-  const frac = pairwiseAgreement(entry.answers[r1.label], entry.answers[r2.label]);
+  const frac = pairwiseAgreement(entry.answers[r1.label][1], entry.answers[r2.label][1]);
   resultsEl.innerHTML = frac === null
     ? `<div class="error">${r1.label} and ${r2.label} have no overlapping answered questions.</div>`
     : `<div>Agreement between <strong>${r1.label}</strong> and <strong>${r2.label}</strong>:</div>
