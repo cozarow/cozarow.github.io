@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Contact</title>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="CSS/style.css">
+<style>
+  body {
+    background-color: black;
+    color: #e8e8e8;
+    font-family: Quicksand, Helvetica, Arial, sans-serif;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 24px 16px;
+  }
+  h1 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+  }
+  .hint {
+    color: #999;
+    font-size: 1em;
+  }
+  label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    font-size: 0.9em;
+    color: #b5b5b5;
+  }
+  .required {
+    color: #e33;
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    font-family: Quicksand, Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    background: #1a1a1a;
+    color: #e8e8e8;
+    border: 1px solid #444;
+    border-radius: 4px;
+  }
+  input::placeholder,
+  textarea::placeholder {
+    color: #6b7280;
+  }
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+  }
+  textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  .form-group-container {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  button {
+    margin-top: 16px;
+    padding: 8px 20px;
+    font-size: 1em;
+    background: #2a2a2a;
+    color: #e8e8e8;
+    border: 1px solid #555;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  button:hover { background: #3a3a3a; }
+</style>
+</head>
+<body>
+
+<h1>Get in Touch</h1>
+<p class="hint">
+  Fill out the form below and I'll get back to you as soon as possible!
+</p>
+
+<form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+  <input type="hidden" name="access_key" value="7fef565a-325b-4878-81fc-91825a0d48f6" />
+  <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
+  <input type="hidden" name="from_name" value="My Website" />
+  <!-- More customization options available in the docs: https://docs.web3forms.com -->
+
+  <div class="form-group-container">
+    <div>
+      <label for="name">Name <span class="required">*</span></label>
+      <input id="name" name="name" placeholder="Your name" type="text" required />
+    </div>
+    <div>
+      <label for="email">Email <span class="required">*</span></label>
+      <input id="email" name="email" placeholder="Your email" type="email" required />
+    </div>
+    <div>
+      <label for="phone">Phone</label>
+      <input id="phone" name="phone" placeholder="+1 (234) 567-8900" type="text" />
+    </div>
+    <div>
+      <label for="message">Message <span class="required">*</span></label>
+      <textarea id="message" name="message" placeholder="Your message" required></textarea>
+    </div>
+  </div>
+  <button type="submit">Send Message</button>
+</form>
+
+</body>
+</html>
